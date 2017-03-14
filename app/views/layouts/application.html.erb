@@ -9,13 +9,28 @@
   </head>
 
   <body>
-
-
-
-
-
+    <nav class="navbar navbar=default">
+      <div class="container">
+        <div class="navabar-header">
+          <%= link_to "Let's Run", root_path, class:"navbar-brand" %>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <% if current_runner.present? %>
+          <li><%= link_to "RUNNER QUIT", destroy_runner_session_path, method: :delete %></li>
+        <% else %>
+          <li><%= link_to "RUNNER SIGN IN", new_runner_session_path %></li>
+          <li><%= link_to "START RUNNING", new_runner_registration_path %></li>
+        <% end %>
+      </ul>
+      <% if runner_signed_in? %>
+          <%= link_to "New Workout", new_workout_path, class: "navbar-text navbar=link" %>
+      <% end %>
+    </nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+
+  </div class="container">
     <%= yield %>
+  </div>
   </body>
 </html>
