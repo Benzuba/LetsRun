@@ -1,0 +1,8 @@
+<% @workouts.each do |f| %>
+  <h2><%= link_to f.title, f %></h2>
+  <p><%= f.description %></p>
+  <p><%= f.pace %></p>
+  <p><%= f.miles %></p>
+<% end %>
+
+<%= link_to "New Workout", new_workout_path %>
