@@ -7,14 +7,14 @@ class WorkoutsController < ApplicationController
 
 
   def new
-    @workout = Workout.new
+    @workout = current_runner.workouts.build
   end
 
   def show
   end
 
   def create
-    @workout = Workout.new(workout_params)
+    @workout = current_runner.workouts.build(workout_params)
     if @workout.save
       redirect_to root_path
     else
