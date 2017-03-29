@@ -1,0 +1,15 @@
+
+#transbox {
+  float: left;
+  display: inline;
+  margin-top: 20px;
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 13px;
+  position: relative;
+  -moz-box-shadow: 10px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+}

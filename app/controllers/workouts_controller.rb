@@ -2,7 +2,9 @@ class WorkoutsController < ApplicationController
   before_action :find_item, only:[:show, :edit, :update, :destroy]
 
   def index
-    @workouts = Workout.all.order('created_at DESC')
+    if runner_signed_in?
+      @workouts = Workout.where(:runner_id => current_runner.id).order('created_at DESC')
+    end
   end
 
 

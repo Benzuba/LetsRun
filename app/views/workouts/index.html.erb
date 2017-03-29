@@ -1,8 +1,17 @@
-<% @workouts.each do |f| %>
-  <h2><%= link_to f.title, f %></h2>
-  <p><%= f.description %></p>
-  <p><%= f.pace %></p>
-  <p><%= f.miles %></p>
-<% end %>
+<% if runner_signed_in? %>
 
-<%= link_to "New Workout", new_workout_path %>
+  <% @workouts.each do |f| %>
+
+    <div id="transbox">
+      <h3>  DATE:  <%= link_to f.title, f %></h3>
+      <li>  DESCRIPTION:  <%= f.description %></li>
+      <li>  PACE:  <%= f.pace %></li>
+      <li>  MILES:  <%= f.miles %></li>
+    </div>
+  </div>
+</div>
+  <% end %>
+
+<% else %>
+  <%= render 'welcome_page' %>
+<% end %>
