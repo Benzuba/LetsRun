@@ -1,16 +1,32 @@
 <% if runner_signed_in? %>
 
-  <% @workouts.each do |f| %>
 
+  <% @workouts.each do |f| %>
+      <% if f.completed? %>
+      <div id="transbox">
+        <h3><strike>  DATE:  <%= link_to f.title, f %></strike></h3>
+        <li>  DESCRIPTION:  <%= f.description %></li>
+        <li>  PACE:  <%= f.pace %></li>
+        <li>  MILES:  <%= f.miles %></li>
+        <li>Finished: <%= link_to complete_workout_path(f), method: :patch do%><i class="glyphicon glyphicon-star"></i></li>
+
+          <% end %>
+      </div>
+
+
+
+    <% else %>
     <div id="transbox">
       <h3>  DATE:  <%= link_to f.title, f %></h3>
       <li>  DESCRIPTION:  <%= f.description %></li>
       <li>  PACE:  <%= f.pace %></li>
       <li>  MILES:  <%= f.miles %></li>
+      <li><%= link_to complete_workout_path(f), method: :patch do%><i class="glyphicon glyphicon-star"></i></li>
+      <% end %>
+    <% end %>
     </div>
-  </div>
-</div>
-  <% end %>
+    <% end %>
+
 
 <% else %>
   <%= render 'welcome_page' %>
