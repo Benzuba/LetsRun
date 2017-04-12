@@ -1,32 +1,89 @@
 <% if runner_signed_in? %>
 
-
-  <% @workouts.each do |f| %>
-      <% if f.completed? %>
-      <div id="transbox">
-        <h3><strike>  DATE:  <%= link_to f.title, f %></strike></h3>
-        <li>  DESCRIPTION:  <%= f.description %></li>
-        <li>  PACE:  <%= f.pace %></li>
-        <li>  MILES:  <%= f.miles %></li>
-        <li>Finished: <%= link_to complete_workout_path(f), method: :patch do%><i class="glyphicon glyphicon-star"></i></li>
-
-          <% end %>
-      </div>
-
-
-
-    <% else %>
-    <div id="transbox">
-      <h3>  DATE:  <%= link_to f.title, f %></h3>
-      <li>  DESCRIPTION:  <%= f.description %></li>
-      <li>  PACE:  <%= f.pace %></li>
-      <li>  MILES:  <%= f.miles %></li>
-      <li><%= link_to complete_workout_path(f), method: :patch do%><i class="glyphicon glyphicon-star"></i></li>
-      <% end %>
-    <% end %>
-    </div>
-    <% end %>
-
+<div class="divTable">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell">LetsRun</div>
+<div class="divTableCell">Monday</div>
+<div class="divTableCell">Tuesday</div>
+<div class="divTableCell">Wendsday</div>
+<div class="divTableCell">Thursday</div>
+<div class="divTableCell">Friday</div>
+<div class="divTableCell">Saturday</div>
+<div class="divTableCell">Sunday</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">1</div>
+<div class="divTableCell"><%= render_workout(1, "Monday")%></div>
+<div class="divTableCell"><%= render_workout(1, "Tuesday")%></div>
+<div class="divTableCell"><%= render_workout(1, "Wedndsday")%></div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">2</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">3</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">4</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">4</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">5</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">6</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell">&nbsp;</div>
+</div>
+</div>
+</div>
 
 <% else %>
   <%= render 'welcome_page' %>

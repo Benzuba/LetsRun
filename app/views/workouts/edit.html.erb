@@ -1,7 +1,9 @@
 <div class="col-mid-8 col-md-offset-2">
   <h1>Change Workout</h1>
 
-  <%= render 'form' %>
-
-
+  <%= simple_form_for @workout do |f| %>
+    <%= f.input :description %>
+    <%= f.input :miles %>
+    <%= f.button :submit %>
+  <% end %>
 </div>

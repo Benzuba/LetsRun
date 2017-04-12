@@ -45,7 +45,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:title, :description, :pace, :miles)
+    params.require(:workout).permit(:week, :description, :day, :miles)
   end
 
   def find_item
