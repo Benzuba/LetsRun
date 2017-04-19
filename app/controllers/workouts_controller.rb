@@ -29,7 +29,7 @@ class WorkoutsController < ApplicationController
 
   def update
     if @workout.update(workout_params)
-      redirect_to workout_path(@workout)
+      redirect_to root_path
     else
       render 'edit'
     end
@@ -38,7 +38,7 @@ class WorkoutsController < ApplicationController
   def complete
     @workout = Workout.find(params[:id])
     @workout.update_attribute(:completed_at, Time.now)
-    redirect_to root_path
+    redirect_to edit_workout_path
   end
 
 

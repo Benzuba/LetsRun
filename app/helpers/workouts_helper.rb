@@ -9,6 +9,6 @@ def workout_details(workout)
     if workout.completed?
     "#{workout.description}"  "#{workout.miles}" " " "miles" "\n" "FINISHED"
     else
-    "#{workout.description} #{workout.miles} miles"
+    "#{workout.description} "  " #{workout.miles} miles"
     end
 end
