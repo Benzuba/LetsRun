@@ -4,4 +4,5 @@ class Workout < ApplicationRecord
   def completed?
     !completed_at.blank?
   end
+
 end

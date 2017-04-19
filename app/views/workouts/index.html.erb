@@ -1,5 +1,7 @@
 <% if runner_signed_in? %>
 
+
+<div class="container center">
 <div class="divTable">
 <div class="divTableBody">
 <div class="divTableRow">
@@ -17,74 +19,74 @@
 <div class="divTableCell"><%= render_workout(1, "Monday")%></div>
 <div class="divTableCell"><%= render_workout(1, "Tuesday")%></div>
 <div class="divTableCell"><%= render_workout(1, "Wedndsday")%></div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell"><%= render_workout(1, "Thursday")%></div>
+<div class="divTableCell"><%= render_workout(1, "Friday")%></div>
+<div class="divTableCell"><%= render_workout(1, "Saturday")%></div>
+<div class="divTableCell"><%= render_workout(1, "Sunday")%></div>
 </div>
 <div class="divTableRow">
 <div class="divTableCell">2</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell"><%= render_workout(2, "Monday")%></div>
+<div class="divTableCell"><%= render_workout(2, "Tuesday")%></div>
+<div class="divTableCell"><%= render_workout(2, "Wedndsday")%></div>
+<div class="divTableCell"><%= render_workout(2, "Thursday")%></div>
+<div class="divTableCell"><%= render_workout(2, "Friday")%></div>
+<div class="divTableCell"><%= render_workout(2, "Saturday")%></div>
+<div class="divTableCell"><%= render_workout(2, "Sunday")%></div>
 </div>
 <div class="divTableRow">
 <div class="divTableCell">3</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
 </div>
 <div class="divTableRow">
 <div class="divTableCell">4</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-</div>
-<div class="divTableRow">
-<div class="divTableCell">4</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
 </div>
 <div class="divTableRow">
 <div class="divTableCell">5</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
 </div>
 <div class="divTableRow">
 <div class="divTableCell">6</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
-<div class="divTableCell">&nbsp;</div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">7</div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
+<div class="divTableCell"></div>
 </div>
 </div>
 </div>
-
+</div>
 <% else %>
   <%= render 'welcome_page' %>
 <% end %>

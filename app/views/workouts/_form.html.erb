@@ -1,9 +1,12 @@
 
 
 <%= simple_form_for @workout do |f| %>
-  <%= f.input :week %>
-  <%= f.input :day %>
+
+  <%= f.input :week, :collection => [1, 2, 3, 4, 5, 6] %>
+  <%= f.input :day, :collection => %w[Monday Tuesday Wedndsday Thursday Friday Saturday Sunday] %>
   <%= f.input :description %>
   <%= f.input :miles %>
   <%= f.button :submit %>
+
+
 <% end %>

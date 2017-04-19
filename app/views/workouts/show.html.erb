@@ -1,9 +1,8 @@
-<div class="col-md-10 col-md-offset-1">
-  <p><%= @workout.description %></h2>
-  <p><%= @workout.miles %></h2>
-
-  <div class="col-md-4 col-md-offset-4">
-    <%= link_to "Back", root_path %>
-    <%= link_to "Update", edit_workout_path(@workout) %>
-  </div>
+<div class="container center">
+<div class="transbox">
+  <h2><%= @workout.description %></h2>
+  <h2><%= @workout.miles %></h2>
+  <%= link_to "Back", root_path %>
+  <%= link_to "Update", edit_workout_path(@workout) %>
+</div>
 </div>

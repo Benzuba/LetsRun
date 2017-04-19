@@ -1,9 +1,11 @@
 <div class="col-mid-8 col-md-offset-2">
   <h1>Change Workout</h1>
-
+  <li>Mark As Complete <%= link_to complete_workout_path, method: :patch do%><i class="glyphicon glyphicon-star"></i></li>
+  <% end %>
   <%= simple_form_for @workout do |f| %>
-    <%= f.input :description %>
+    <%= f.input :description, placeholder:  "How many miles did you actually run?"  %>
     <%= f.input :miles %>
     <%= f.button :submit %>
+
   <% end %>
 </div>
