@@ -11,6 +11,7 @@
   </head>
 
   <body>
+
     <nav class="navbar navbar=default">
       <div class="container">
         <div class="navabar-header">
@@ -29,12 +30,52 @@
       <% end %>
     </nav>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
   </div class="container">
     <%= yield %>
   </div>
 
+
+ <br class="clr" />
+  <div id="footer">
+    <div class="container">
+      <div class="col-xs-12 col-sm-3">
+        <b>Runners</b>
+        <br />
+        <%= link_to 'Choose a Plan', '#' %>
+        <br />
+        <%= link_to 'Manage Your Run', '#' %>
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>About</b>
+        <br />
+        <%= link_to 'Learn Something', '#' %>
+        <br />
+        <%= link_to 'About Me', '#'%>
+        <br />
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>Resources</b>
+        <br />
+        <%= link_to 'Running Articles' '#' %>
+        <br />
+        <%= link_to 'Upcomming Races' '#' %>
+        <br />
+      </div>
+      <div class="col-xs-12 col-sm-3">
+        <b>Social</b>
+        <br />
+        <%= link_to 'http://github.com/benzuba11' do %>
+          <%= image_tag 'github.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'http://facebook.com' do %>
+          <%= image_tag 'facebook.png', class: 'social-button' %>
+        <% end %>
+        <%= link_to 'http://twitter.com' do %>
+          <%= image_tag 'twitter.png', class: 'social-button' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
 </html>
