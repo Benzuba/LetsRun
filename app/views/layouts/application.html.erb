@@ -12,23 +12,71 @@
 
   <body>
 
-    <nav class="navbar navbar=default">
-      <div class="container">
-        <div class="navabar-header">
-          <%= link_to "Let's Run", root_path, class:"navbar-brand" %>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to 'LetsRun', root_path, class: 'navbar-brand' %>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+                          <li class="active"><a href="#">Workout Training Plans</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Full Marathon <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Novice</a></li>
+                <li><a href="#">Beginner</a></li>
+                <li><a href="#">Intermediete</a></li>
+              </ul>
+
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Half Marathon <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Novice</a></li>
+                  <li><a href="#">Beginner</a></li>
+                  <li><a href="#">Intermediete</a></li>
+                </ul>
+                <li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">10k<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Novice</a></li>
+                    <li><a href="#">Beginner</a></li>
+                    <li><a href="#">Intermediete</a></li>
+                  </ul>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">5k<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Novice</a></li>
+                      <li><a href="#">Beginner</a></li>
+                      <li><a href="#">Intermediete</a></li>
+                    </ul>
+
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <% if current_runner.present? %>
+              <li><%= link_to "RUNNER QUIT", destroy_runner_session_path,method: :delete %></li>
+            <% else %>
+              <li><%= link_to "RUNNER SIGN IN", new_runner_session_path %></li>
+              <li><%= link_to "START RUNNING", new_runner_registration_path%></li>
+            <% end %>
+          </ul>
+          <% if runner_signed_in? %>
+              <%= link_to "New Workout", new_workout_path, class: "navbar-brand" %>
+          <% end %>
+        </div>
       </div>
-      <ul class="nav navbar-nav navbar-right">
-        <% if current_runner.present? %>
-          <li><%= link_to "RUNNER QUIT", destroy_runner_session_path, method: :delete %></li>
-        <% else %>
-          <li><%= link_to "RUNNER SIGN IN", new_runner_session_path %></li>
-          <li><%= link_to "START RUNNING", new_runner_registration_path %></li>
-        <% end %>
-      </ul>
-      <% if runner_signed_in? %>
-          <%= link_to "New Workout", new_workout_path, class: "navbar-brand" %>
-      <% end %>
     </nav>
+    <% if notice.present? %>
+  <p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
 
   </div class="container">
