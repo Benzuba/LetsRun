@@ -1,11 +1,23 @@
-
-
-  .clr {
-  clear:both;
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 
+#navbar-brand{
+  weight: 10px;
+}
 
+
+.Site-content {
+  flex: 1;
+}
+
+.social {
+  height: 50px;
+  width:50px;
+}
 
 .transbox {
   min-width: 250px;

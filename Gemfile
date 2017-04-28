@@ -21,6 +21,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.2'
 
 gem 'jquery-rails'
+gem "font-awesome-rails", "~> 4.3"
 
 gem 'turbolinks', '~> 5'
 
